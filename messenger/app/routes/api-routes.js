@@ -45,9 +45,9 @@ module.exports = function(app) {
     // Take the request...
     var message = req.body;
     // Create string to encode
-    // var convoUsers = message.senderName + "&" + message.senderName;
+    var convoUsers = message.senderName + "&" + message.senderName;
     // // Create a unique convoID by encoding to base32
-    // convoID = base32.encode(convoUsers);
+    convoID = base32.encode(convoUsers);
 
     // Create a unique userID's by encoding to base32
     var senderID = base32.encode(message.senderName);

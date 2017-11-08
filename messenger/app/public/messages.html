@@ -7,40 +7,38 @@
 	<script src="https://code.jquery.com/jquery.js">
 	</script>
 	<link href="./css/messenger-style.css" rel="stylesheet">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js">
-		</script>
-		<div class="content container-fluid bootstrap snippets">
-			<div class="row row-broken">
-				<div class="col-sm-3 col-xs-12">
-					<div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5000">
-						<div class="chat-users">
-							<h6>Online</h6>
-							<div class="user">
-								<div class="avatar">
-									<img alt="User name" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-									<div class="status off"></div>
-								</div>
-								<div class="name">User name</div>
-								<div class="mood">User mood</div>
+	<div class="content container-fluid bootstrap snippets">
+		<div class="row row-broken">
+			<div class="col-sm-3 col-xs-12">
+				<div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5000">
+					<div class="chat-users">
+						<h6>Online</h6>
+						<div class="user">
+							<div class="avatar">
+								<img alt="User name" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+								<div class="status off"></div>
 							</div>
+							<div class="name">User name</div>
+							<div class="mood">User mood</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
-					<div class="col-inside-lg decor-default">
-						<div class="chat-body">
-							<h6 id="receiver-name">==Name Goes Here==</h6>
+			</div>
+			<div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
+				<div class="col-inside-lg decor-default">
+					<div class="chat-body">
+						<h6>Mini Chat</h6>
+						<div id="message-box">
 							<div class="answer left">
 								<div class="avatar">
-									<img alt="User name" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+									<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
 									<div class="status offline"></div>
 								</div>
-								<div class="name">==Receiver Name==</div>
+								<div class="name" id="sender-name">Alexander Herthic</div>
 								<div class="text">
 									Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
 								</div>
@@ -51,21 +49,21 @@
 									<img alt="User name" src="https://bootdey.com/img/Content/avatar/avatar2.png">
 									<div class="status offline"></div>
 								</div>
-								<div class="sender-name">==Sender Name==</div>
+								<div class="name" id="sender-name">==Sender Name==</div>
 								<div class="text">
 									Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
 								</div>
 								<div class="time">5 min ago</div>
 							</div>
+						</div>
 						<div class="answer-add">
-							<input placeholder="Write a message" id="message-body"> <span class="answer-btn answer-btn-1"></span> <span class="answer-btn answer-btn-2"  id="message-send"></span>
+							<input placeholder="Write a message" id="message-body"> <span class="answer-btn answer-btn-1" id="message-attach"></span> <span class="answer-btn answer-btn-2"  id="message-send"></span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/message.js" type="text/javascript">
-	</script>
+	<script src="js/message.js" type="text/javascript"></script>
 </body>
 </html>

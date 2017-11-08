@@ -1,7 +1,7 @@
 
 body{
     margin-top:20px;
-    background:#eee;
+    background:rgb(44, 44, 44);
 }
 .row.row-broken {
     padding-bottom: 0;
@@ -168,13 +168,13 @@ body{
     left: 4px;
 }
 .chat-body .answer.right .text {
-    background: #7266ba;
+    background: #3590a7;
     color: #ffffff;
     border-radius: 8px 8px 0 8px;
 }
 .chat-body .answer.right .text:before {
     right: -30px;
-    border-left-color: #7266ba;
+    border-left-color: #3590a7;
     border-left-width: 12px;
 }
 .chat-body .answer.right .time {
@@ -188,7 +188,7 @@ body{
     position: relative;
     margin: 20px -20px -20px;
     padding: 20px;
-    background: #46be8a;
+    background: #45a38f;
 }
 .chat-body .answer-add input {
     border: none;

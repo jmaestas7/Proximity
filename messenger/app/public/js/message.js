@@ -3,10 +3,10 @@
 $(document).ready(function() {
   /* global moment */
 
-  // messageontainer holds all of our posts
-  var blogContainer = $(".message-container");
   // Click events for the edit and delete buttons
   $("#message-send").on("click", sendMessage);
+  // chatBox holds all our current messages
+  var chatBox = $("#message-box")
   $(document).on("click", "message-delete", deleteMessage);
 
   // varible to hold messages
@@ -16,7 +16,17 @@ $(document).ready(function() {
   // Looks for a query param in the url for convo_id
   var url = window.location.search;
   console.log(url);
-  var convoId = url.split("=")[1];;
+  // var convoId = url.split("=")[1];;
+  var convoId = 12123;
+
+  //required for scrolling of chatbox and users
+  $(function(){
+      $(".chat").niceScroll();
+  })
+
+  $("#message-attach").on("click", function(){
+    console.log(url);
+  });
   // if (url.indexOf("?convo_id=") !== -1) {
   //   convoId = url.split("=")[1];
   //   geMesseges(convoId);
@@ -70,11 +80,44 @@ $(document).ready(function() {
       // tell the user we're adding a character with an alert window
       alert("Message Sent");
     });
-
+    chatBox.append(renderNewMessage(newMessage));
     // empty each message box by replacing the value with an empty string
     $("#message-body").val("");
     };
 
+    function renderNewMessage(newMessage) {
+      var $newMessageBox = $(
+        [
+          '<div class="answer right">',
+            '<div class="avatar">',
+              '<img alt="User name" src="#">',
+              '<div class="status online"></div>',
+            '</div>',
+            '<div class="sender-name">',
+              newMessage.senderName,
+            '</div>',
+            '<div class="text">',
+              newMessage.body,
+            '</div>',
+            '<div class="time">',
+              'TIME SENT',
+            '</div></div>'
+        ].join("")
+      );
+        return $newMessageBox;
+    };
+
+      
+  
+      // $newInputRow.find("button.delete").data("id", todo.id);
+      // $newInputRow.find("input.edit").css("display", "none");
+      // $newInputRow.data("todo", todo);
+      // if (todo.complete) {
+      //   $newInputRow.find("span").css("text-decoration", "line-through");
+      // }
+      // return $newInputRow;
+
     function deleteMessage() {
     };
+
 });
